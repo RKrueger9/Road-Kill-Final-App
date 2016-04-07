@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,UIImagePickerControllerDelegate
+class ViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate
 {
 
     @IBOutlet weak var imageView: UIImageView!
@@ -17,22 +17,24 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate
     override func viewDidLoad()
     {
         super.viewDidLoad();
+        imagePicker.delegate = self;
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject])
     {
-        imagePicker.dismissViewControllerAnimated(true)
-            {
-                () -> Void in
-                let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage;
-                self.imageView.image = selectedImage;
-            }
+        imagePicker.dismissViewControllerAnimated(true) { () -> Void in
+            let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+            self.imageView.image = selectedImage;
+        }
     }
     
     @IBAction func onCameraButtonTap(sender: AnyObject)
     {
-        
-
+        if(UIImagePickerController.isSourceTypeAvailable(.Camera))
+        {
+            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+            presentViewController(imagePicker, animated: true, completion: nil)
+        }
     }
     
     @IBAction func onLibraryButtonTap(sender: AnyObject)
