@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBAction func onCameraButtonTap(sender: AnyObject)
     {
         
+
     }
     
     @IBAction func onLibraryButtonTap(sender: AnyObject)
