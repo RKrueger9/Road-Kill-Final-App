@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,25 +17,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DrH-TX-NhM">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DrH-TX-NhM">
                                 <rect key="frame" x="273" y="406" width="54" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Camera"/>
                                 <connections>
                                     <action selector="onCameraButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Mg-hB-AIQ"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8NX-5H-MqW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8NX-5H-MqW">
                                 <rect key="frame" x="20" y="20" width="560" height="324"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="5Ff-jp-5Fe"/>
+                                    <constraint firstAttribute="height" constant="324" id="J7T-L5-4OW"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9e-oB-7Di">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9e-oB-7Di">
                                 <rect key="frame" x="276" y="453" width="48" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Library"/>
                                 <connections>
                                     <action selector="onLibraryButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qDE-R4-bu7"/>
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8NX-5H-MqW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9fs-RO-v0B"/>
+                            <constraint firstItem="8NX-5H-MqW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EX8-BN-Uo6"/>
+                            <constraint firstItem="DrH-TX-NhM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MNc-Wl-7kO"/>
+                            <constraint firstItem="8NX-5H-MqW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ZbH-Uu-kF7"/>
+                            <constraint firstItem="8NX-5H-MqW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="xfh-44-mw8"/>
+                            <constraint firstItem="V9e-oB-7Di" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zy7-VM-kTB"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="8NX-5H-MqW" id="Mlx-9O-h8z"/>
@@ -43,6 +60,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="288" y="283"/>
+        </scene>
+        <!--Loading Page-->
+        <scene sceneID="VHm-OG-Kgc">
+            <objects>
+                <viewController id="VEO-ss-92K" customClass="loadingPage" customModule="Road_Kill_Facts" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VIA-v9-pLx"/>
+                        <viewControllerLayoutGuide type="bottom" id="yee-Z0-AcB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gDe-Zo-pWI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Q4-Wa-Dds">
+                                <rect key="frame" x="151" y="182" width="299" height="235"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7h-wx-89f">
+                                <rect key="frame" x="279" y="72" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8Q4-Wa-Dds" firstAttribute="centerX" secondItem="gDe-Zo-pWI" secondAttribute="centerX" id="5xp-uE-Anq"/>
+                            <constraint firstItem="x7h-wx-89f" firstAttribute="centerX" secondItem="gDe-Zo-pWI" secondAttribute="centerX" id="k24-db-sKy"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4GX-9g-xnC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932" y="283"/>
+        </scene>
+        <!--Information Page-->
+        <scene sceneID="HHS-wg-azi">
+            <objects>
+                <viewController id="XXu-o8-I3b" customClass="informationPage" customModule="Road_Kill_Facts" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fIe-h4-Pxr"/>
+                        <viewControllerLayoutGuide type="bottom" id="Aju-CP-lJg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gOv-aZ-z9k">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MFH-lf-7HX">
+                                <rect key="frame" x="149" y="175" width="302" height="250"/>
+                                <animations/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MFH-lf-7HX" firstAttribute="centerX" secondItem="gOv-aZ-z9k" secondAttribute="centerX" id="Uhq-PX-IAu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yed-j7-2wP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1590" y="283"/>
         </scene>
     </scenes>
 </document>
