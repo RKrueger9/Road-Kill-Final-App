@@ -85,19 +85,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="AN2-Uj-whS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Xc-eW-cig"/>
-                            <constraint firstItem="WTd-Cg-ubh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Xi-px-PRc"/>
                             <constraint firstItem="8NX-5H-MqW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9fs-RO-v0B"/>
+                            <constraint firstItem="Bbo-Kv-mmp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-255.5" id="Dn1-Jc-9s9"/>
                             <constraint firstItem="8NX-5H-MqW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EX8-BN-Uo6"/>
-                            <constraint firstItem="I6c-Q8-bIW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HJi-5R-lAD"/>
-                            <constraint firstItem="C3e-ai-gL4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KSf-R4-3Gk"/>
                             <constraint firstItem="DrH-TX-NhM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MNc-Wl-7kO"/>
-                            <constraint firstItem="Hvs-cn-JeY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mow-0j-Vjj"/>
-                            <constraint firstItem="nEb-dw-GPI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S1f-BS-B9i"/>
-                            <constraint firstItem="yeG-xS-Xqo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VuD-dN-VCS"/>
-                            <constraint firstItem="Bbo-Kv-mmp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wpd-pr-jBw"/>
+                            <constraint firstItem="nEb-dw-GPI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-195" id="RfK-YI-D7E"/>
                             <constraint firstItem="8NX-5H-MqW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ZbH-Uu-kF7"/>
-                            <constraint firstItem="g9E-8Z-xR6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gX6-4P-efM"/>
+                            <constraint firstItem="WTd-Cg-ubh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-255.5" id="fdN-Ph-d7I"/>
+                            <constraint firstItem="I6c-Q8-bIW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-195" id="ldg-b3-kPj"/>
+                            <constraint firstItem="C3e-ai-gL4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-255.5" id="mxB-zv-oHd"/>
+                            <constraint firstItem="Hvs-cn-JeY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-195" id="oFB-kO-qTH"/>
+                            <constraint firstItem="yeG-xS-Xqo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-255.5" id="u3s-Pn-OoS"/>
                             <constraint firstItem="8NX-5H-MqW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="xfh-44-mw8"/>
+                            <constraint firstItem="g9E-8Z-xR6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-195" id="zxb-ej-dCP"/>
                             <constraint firstItem="V9e-oB-7Di" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zy7-VM-kTB"/>
                         </constraints>
                     </view>
