@@ -49,6 +49,5 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
             print("hI");
         }
     }
-    
 }
 
