@@ -42,6 +42,10 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary;
         presentViewController(imagePicker, animated: true, completion: nil);
     }
+    @IBAction func goButton(sender: AnyObject)
+    {
+    
+    }
     
 }
 
