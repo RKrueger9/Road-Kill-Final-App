@@ -44,7 +44,10 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     }
     @IBAction func goButton(sender: AnyObject)
     {
-    
+        if(imageView.image != "")
+        {
+            print("hI");
+        }
     }
     
 }
