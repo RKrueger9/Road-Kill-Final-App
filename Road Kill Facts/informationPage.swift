@@ -10,5 +10,6 @@ import UIKit
 
 class informationPage: UIViewController
 {
+    @IBOutlet weak var outputText: UITextView!
 
 }

@@ -18,6 +18,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     {
         super.viewDidLoad();
         imagePicker.delegate = self;
+        imageView.image = UIImage(named: "get well soon");
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject])
