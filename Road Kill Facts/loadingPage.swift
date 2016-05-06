@@ -17,8 +17,16 @@ class loadingPage: UIViewController
     var currentImage = UIImage(named: "0")
     var foregroundImage = UIImage(named: "tire")
     var i = 0;
+    var size = CGSize()
+    var rect = CGRect()
     override func viewDidLoad()
     {
+        size = imageView.frame.size;
+        rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+        var min = rect.width;
+        if(rect.height<rect.width){min = rect.height}
+        size = CGSize(width: min, height: min)
+        
         timerBack = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "updateBack", userInfo: nil, repeats: true)
         timerFront = NSTimer.scheduledTimerWithTimeInterval(0.025, target: self, selector: "updateFront", userInfo: nil, repeats: true)
         NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "next", userInfo: nil, repeats: false)
@@ -33,14 +41,13 @@ class loadingPage: UIViewController
     
     func updateFront()
     {
-        var size = imageView.frame.size;
-        var rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         UIGraphicsBeginImageContext(imageView.frame.size)
         currentImage?.drawInRect(rect)
-        rotate(CGFloat(i), size: size,image: foregroundImage!).drawInRect(rect)
+        rotate(CGFloat(i),image: foregroundImage!).drawInRect(rect)
         imageView.image  = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        i+=5
+        //speed
+        i+=3
     }
     
     func next()
@@ -50,18 +57,15 @@ class loadingPage: UIViewController
         performSegueWithIdentifier("show", sender: self)
     }
     
-    func rotate(deg: CGFloat, size: CGSize, image: UIImage) -> UIImage
+    func rotate(deg: CGFloat, image: UIImage) -> UIImage
     {
-        let radiansToDegrees: (CGFloat) -> CGFloat = {
-            return $0 * (180.0 / CGFloat(M_PI))
-        }
-        let degreesToRadians: (CGFloat) -> CGFloat = {
-            return $0 / 180.0 * CGFloat(M_PI)
+        let degreesToRadians:(CGFloat) -> CGFloat =
+        {
+            return $0/180.0 * CGFloat(M_PI)
         }
         
         // Create the bitmap context
         UIGraphicsBeginImageContext(size)
-        //image.drawInRect(CGRect(x: 0, y: 0, width: size.width, height: size.height))
         let bitmap = UIGraphicsGetCurrentContext()
         
         // Move the origin to the middle of the image so we will rotate and scale around the center.
